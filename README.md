@@ -1,16 +1,5 @@
 # Analyse des accidents corporels de la route en France
 
-# 🚗 Analyse des accidents corporels de la route en France
-
-🎓 **Projet tuteuré – Master 2 Big Data, Data Science & Analyse des Risques**  
-Université de Montpellier (2024–2025)
-
----
-
-## 📌 Objectif du projet
-
-Ce projet vise à identifier les **facteurs influençant la gravité des accidents corporels de la route** en France à partir des données publiques de la base BAAC (Bulletin d’Analyse des Accidents Corporels).
-
 ---
 
 ## 📁 Données utilisées
