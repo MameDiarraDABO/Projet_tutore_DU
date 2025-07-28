@@ -29,8 +29,8 @@ Les données proviennent de la base ouverte du Ministère de l’Intérieur fran
 - Analyse en composantes principales (ACP) sur variables numériques
 
 ### 4. Modélisation
-- Régression logistique (GLM binomial) pour prédire la gravité
-- Modèle XGBoost pour la classification binaire "Grave" vs "Non grave"
+- Régression logistique (GLM multinomiale et binomiale) pour prédire la gravité
+- Modèle XGBoost pour la classification multi-classes et binaire "Grave" vs "Non grave"
 - Interprétation avec SHAP (importance des variables)
 
 ### 5. Visualisation
@@ -41,9 +41,12 @@ Les données proviennent de la base ouverte du Ministère de l’Intérieur fran
 
 ## 🔍 Résultats clés
 
-- Les accidents graves sont surreprésentés la nuit, sur routes bidirectionnelles, avec choc frontal
-- Les variables les plus prédictives selon SHAP : **heure**, **type de choc**, **catégorie d’usager**, **situation du lieu**
-- Le modèle XGBoost atteint une précision de XX%, avec une AUC de YY%
+- Les modèles multi-classes montrent une bonne différenciation entre les niveaux de gravité
+- Les accidents graves sont surreprésentés :
+  - de nuit, sur routes bidirectionnelles, lors de chocs frontaux
+  - chez certaines catégories d'usagers (ex. : piétons, cyclomotoristes)
+- Variables les plus influentes (SHAP & XGBoost) : **heure**, **type de choc**, **catégorie d’usager**, **configuration de la route**
+- La classification binaire atteint une AUC de XX% – utile pour une détection automatisée rapide
 
 ---
 
@@ -55,7 +58,5 @@ Les données proviennent de la base ouverte du Ministère de l’Intérieur fran
 - **Cartographie** : geopandas, contextily
 
 ---
-
-## 📁 Arborescence du dépôt
 
 
